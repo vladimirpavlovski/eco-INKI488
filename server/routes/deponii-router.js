@@ -1,13 +1,13 @@
 const express = require('express')
 
-const DeponijaCtrl = require('../controllers/movie-ctrl')
+const DeponijaCtrl = require('../controllers/deponii-ctrl')
 
 const router = express.Router()
 
-router.post('/deponija', DeponiiCtrl.createDeponii)
-router.put('/deponija/:id', DeponiiCtrl.updateDeponii)
-router.delete('/deponija/:id', DeponiiCtrl.deleteDeponii)
-router.get('/deponija/:id', DeponiiCtrl.getDeponiiById)
-router.get('/deponija', DeponiiCtrl.getDeponii)
+router.post('/deponija', DeponijaCtrl.createDeponii)
+router.put('/deponija/:id', DeponijaCtrl.updateDeponii)
+router.delete('/deponija/:id', DeponijaCtrl.deleteDeponii)
+router.get('/deponija/:id', DeponijaCtrl.getDeponiiById)
+router.get('/deponija', DeponijaCtrl.getDeponii)
 
 module.exports = router

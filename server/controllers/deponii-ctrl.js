@@ -1,4 +1,4 @@
-const Deponii = require('../deponii/divi_deponii')
+const Deponii = require('../deponii/diviDeponii')
 
 createDeponii = (req, res) => {
     const body = req.body
