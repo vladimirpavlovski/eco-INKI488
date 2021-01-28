@@ -3,8 +3,8 @@ import ReactTable from 'react-table'
 import api from '../api'
 
 import styled from 'styled-components'
-
-import 'react-table/react-table.css'
+ 
+import "react-table-6/react-table.css" 
 
 const Wrapper = styled.div`
     padding: 0 40px 40px 40px;
@@ -14,7 +14,7 @@ class DeponiiList extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            deponiis: [],
+            deponii: [],
             columns: [],
             isLoading: false,
         }
@@ -23,17 +23,17 @@ class DeponiiList extends Component {
     componentDidMount = async () => {
         this.setState({ isLoading: true })
 
-        await api.getAllDeponii().then(deponiis => {
+        await api.getAllDeponii().then(deponii => {
             this.setState({
-                deponiis: deponiis.data.data,
+                deponii: deponii.data.data,
                 isLoading: false,
             })
         })
     }
 
     render() {
-        const { deponiis, isLoading } = this.state
-        console.log('TCL: DeponiiList -> render -> deponiis', deponiis)
+        const { deponii, isLoading } = this.state
+        console.log('TCL: DeponiiList -> render -> deponii', deponii)
 
         const columns = [
             {
@@ -60,15 +60,17 @@ class DeponiiList extends Component {
         ]
 
         let showTable = true
-        if (!deponiis.length) {
+        if (!deponii.length) {
             showTable = false
         }
 
         return (
             <Wrapper>
+                <p>dsadasd</p>
+                <input></input>
                 {showTable && (
                     <ReactTable
-                        data={deponiis}
+                        data={deponii}
                         columns={columns}
                         loading={isLoading}
                         defaultPageSize={10}

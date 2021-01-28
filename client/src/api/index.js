@@ -5,7 +5,7 @@ const api = axios.create({
 })
 
 export const insertDeponija = payload => api.post(`/deponija`, payload)
-export const getAllDeponii = () => api.get(`/deponii`)
+export const getAllDeponii = () => api.get(`/deponija`)
 export const updateDeponijaById = (id, payload) => api.put(`/deponija/${id}`, payload)
 export const deleteDeponijaById = id => api.delete(`/deponija/${id}`)
 export const getDeponijaById = id => api.get(`/deponija/${id}`)
