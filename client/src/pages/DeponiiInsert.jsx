@@ -81,14 +81,14 @@ class DeponiiInsert extends Component {
                
                 <Title>Пријави диви депонии</Title>
 
-                <Label>Name: </Label>
+                <Label>Град </Label>
                 <InputText
                     type="text"
                     value={grad}
                     onChange={this.handleChangeInputName}
                 />
 
-                <Label>Rating: </Label>
+                <Label>Локација </Label>
                 <InputText
                     type="text"
                     value={adresa}
@@ -97,8 +97,8 @@ class DeponiiInsert extends Component {
 
                
 
-                <Button onClick={this.handleIncludeMovie}>Add Movie</Button>
-                <CancelButton href={'/deponii/list'}>Cancel</CancelButton>
+                <Button onClick={this.handleIncludeMovie}>Пријави депонија</Button>
+                <CancelButton href={'/deponii/list'}>Листа на депонии</CancelButton>
             </Wrapper>
         )
     }

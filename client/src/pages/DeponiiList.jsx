@@ -14,7 +14,7 @@ class DeponiiList extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            deponii: [],
+            deponija: [],
             columns: [],
             isLoading: false,
         }
@@ -23,17 +23,17 @@ class DeponiiList extends Component {
     componentDidMount = async () => {
         this.setState({ isLoading: true })
 
-        await api.getAllDeponii().then(deponii => {
+        await api.getAllDeponii().then(deponija => {
             this.setState({
-                deponii: deponii.data.data,
+                deponija: deponija.data.data,
                 isLoading: false,
             })
         })
     }
 
     render() {
-        const { deponii, isLoading } = this.state
-        console.log('TCL: DeponiiList -> render -> deponii', deponii)
+        const { deponija, isLoading } = this.state
+        console.log('TCL: DeponiiList -> render -> deponija', deponija)
 
         const columns = [
             {
@@ -60,7 +60,7 @@ class DeponiiList extends Component {
         ]
 
         let showTable = true
-        if (!deponii.length) {
+        if (!deponija.length) {
             showTable = false
         }
 
@@ -70,7 +70,7 @@ class DeponiiList extends Component {
                 <input></input>
                 {showTable && (
                     <ReactTable
-                        data={deponii}
+                        data={deponija}
                         columns={columns}
                         loading={isLoading}
                         defaultPageSize={10}
