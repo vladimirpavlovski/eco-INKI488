@@ -9,11 +9,16 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 
+
+
+
+
 function App() {
     return (
-        <Router>
+        <Router >
+            
             <NavBar />
-            <Switch>
+            <Switch >
                 <Route path="/deponii/list" exact component={DeponiiList} />
                 <Route path="/deponii/create" exact component={DeponiiInsert} />
                 <Route
@@ -22,7 +27,9 @@ function App() {
                     component={DeponiiUpdate}
                 />
             </Switch>
+          
         </Router>
+         
     )
 }
 

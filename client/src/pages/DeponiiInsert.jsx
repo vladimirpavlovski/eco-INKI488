@@ -58,7 +58,7 @@ class DeponiiInsert extends Component {
 
   
 
-    handleIncludeMovie = async () => {
+    handleIncludeDeponii = async () => {
         const { grad, adresa } = this.state
         
         const payload = { grad, adresa}
@@ -97,9 +97,10 @@ class DeponiiInsert extends Component {
 
                
 
-                <Button onClick={this.handleIncludeMovie}>Пријави депонија</Button>
+                <Button onClick={this.handleIncludeDeponii}>Пријави депонија</Button>
                 <CancelButton href={'/deponii/list'}>Листа на депонии</CancelButton>
             </Wrapper>
+           
         )
     }
 }

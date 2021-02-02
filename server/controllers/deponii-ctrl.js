@@ -1,3 +1,5 @@
+
+
 const Deponii = require('../deponii/diviDeponii')
 
 createDeponii = (req, res) => {
@@ -6,7 +8,7 @@ createDeponii = (req, res) => {
     if (!body) {
         return res.status(400).json({
             success: false,
-            error: 'You must provide a movie',
+            error: 'Mora da vnesete deponija',
         })
     }
 
