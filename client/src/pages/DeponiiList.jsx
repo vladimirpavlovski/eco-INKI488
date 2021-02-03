@@ -24,7 +24,7 @@ class UpdateDeponii extends Component {
     updateDeponija = event => {
         event.preventDefault()
 
-        window.location.href = `/deponija/update/${this.props.id}`
+        window.location.href = `/deponii/update/${this.props.id}`
     }
 
     render() {
